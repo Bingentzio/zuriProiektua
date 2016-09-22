@@ -1,0 +1,49 @@
+
+.hasierakoOrria{
+  width: 75%;
+  position: absolute;
+  top:12%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+}
+
+
+.hasierakoOrria fieldset {
+    border: none;
+    padding: 1.25rem;
+    margin: 1.125rem 0;
+}
+
+.hasierakoOrria fieldset legend {
+    border-bottom: 2px solid #1798A5;
+    width: 100%;
+    line-height: 2rem;
+}
+
+.hasierakoOrria button[type="submit"] {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.hasierakoOrria button:hover, .form button:focus {
+    background: #BE840B;
+  }
+
+.dropbtn{
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+.dropbtn option{
+    font-size: 16px;
+     padding: 10px;
+}
