@@ -38,6 +38,22 @@ $cakeDescription = 'ZuriZuri';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
 
+    <?= $this->Html->css('bootstrap-datetimepicker.min'); ?>
+    <?= $this->Html->script('jquery.js'); ?>
+    <?= $this->Html->script('bootstrap.min.js'); ?>
+    <?= $this->Html->script('bootstrap-datetimepicker.min.js'); ?>
+
+<script>
+      $(function() {
+         $('.datetime').datetimepicker({
+            weekStart: 1,
+    format: 'yyyy-mm-dd hh:ii'
+});
+        });
+
+</script>
+
+
 </head>
 <body >
   <nav class="top-bar expanded" data-topbar role="navigation">
