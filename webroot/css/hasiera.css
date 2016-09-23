@@ -2,14 +2,40 @@
 .hasierakoOrria{
   width: 75%;
   position: absolute;
-  top:12%;
+  top:15%;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-
+}
+.biZutabe{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+   -moz-column-count: 2; /* Firefox */
+   column-count: 2;
+}
+#hora-inicio{
+  height: 50px;
+  font-size: 20px;
 }
 
+#hora-fin{
+  height: 50px;
+  font-size: 20px;
+}
+
+.hasierakoOrria label{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hasierakoOrria select{
+  height: 50px;
+  font-size: 20px;
+}
+.hasierakoOrria select option{
+  padding: 8px;
+  font-size: 20px;
+}
 
 .hasierakoOrria fieldset {
     border: none;
@@ -18,12 +44,13 @@
 }
 
 .hasierakoOrria fieldset legend {
-    border-bottom: 2px solid #1798A5;
+    border-bottom: 3px solid black;
     width: 100%;
-    line-height: 2rem;
+    line-height: 1rem;
 }
 
 .hasierakoOrria button[type="submit"] {
+    background: black;
     position: absolute;
     margin: auto;
     left: 0;
@@ -33,17 +60,78 @@
 }
 
 .hasierakoOrria button:hover, .form button:focus {
-    background: #BE840B;
+    background: grey;
   }
 
 .dropbtn{
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
-
 }
 
-.dropbtn option{
-    font-size: 16px;
-     padding: 10px;
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+    background-color: #308e97;
+    background: #308e97;
+}
+
+.side-nav li.heading {
+    color: #1798A5;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.4375rem 0.875rem;
+}
+
+.form_datetime{
+
+  font-size: 20px;
+}
+
+div.message {
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    padding: 0 1.5rem 0 1.5rem;
+    transition: height 300ms ease-out 0s;
+    background-color: #a0d3e8;
+    color: #626262;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+    overflow: hidden;
+    height: 50px;
+    line-height: 2.5em;
+    box-radius: 5px;
+}
+
+div.message:before {
+    line-height: 0px;
+    font-size: 20px;
+    height: 12px;
+    width: 12px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    left: -11px;
+    background-color: #FFF;
+    padding: 12px 14px 12px 10px;
+    content: "i";
+    color: #a0d3e8;
+}
+
+div.message.error {
+    background-color: #C3232D;
+    color: #FFF;
+}
+
+div.message.error:before {
+    padding: 11px 16px 14px 7px;
+    color: #C3232D;
+    content: "x";
+}
+div.message.hidden {
+    height: 0;
 }

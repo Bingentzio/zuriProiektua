@@ -34,28 +34,14 @@ $cakeDescription = 'ZuriZuri';
     </title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css('hasiera.css') ?>
-
+    <?= $this->Html->css('bootstrap.min'); ?>
     <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
-    <?= $this->Html->css('bootstrap-datetimepicker.min'); ?>
+    <?= $this->Html->css('bootstrap-datetimepicker'); ?>
     <?= $this->Html->script('jquery.js'); ?>
-    <?= $this->Html->script('bootstrap.min.js'); ?>
     <?= $this->Html->script('bootstrap-datetimepicker.min.js'); ?>
 
-<script>
-      $(function() {
-         $('.datetime').datetimepicker({
-            weekStart: 1,
-    format: 'yyyy-mm-dd hh:ii'
-});
-        });
-
-</script>
-
-
 </head>
-<body >
+<body>
   <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
@@ -68,20 +54,50 @@ $cakeDescription = 'ZuriZuri';
           </ul>
         </div>
  </nav>
+ <?= $this->Flash->render() ?>
 <div class="hasierakoOrria">
     <?= $this->Form->create($task) ?>
     <fieldset>
         <legend><?= __('Add Task') ?></legend>
+            </fieldset>
+<div class="biZutabe">
         <?php
             echo $this->Form->input('user_id', ['options' => $users,'class' => 'dropbtn']);
             echo $this->Form->input('job_id', ['options' => $jobs,'class' => 'dropbtn']);
-            echo $this->Form->input('hora_inicio');
-            echo $this->Form->input('hora_fin');
+        ?>
+
+
+        <div class="input-append date form_datetime">
+          <?php echo $this->Form->input('hora_inicio', ['type'=>'text']); ?>
+
+            <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+
+        <div class="input-append date form_datetime">
+        <?php echo $this->Form->input('hora_fin', ['type'=>'text']); ?>
+            <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+
+</div>
+
+
+<?php
+        //    echo $this->Form->input('hora_inicio');
+        //    echo $this->Form->input('hora_fin');
             echo $this->Form->input('observacion');
         ?>
-    </fieldset>
+
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd/mm/yy, hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        weekStart:1,
+        pickerPosition: "bottom-left"
+    });
+</script>
 </body>
 </html>
