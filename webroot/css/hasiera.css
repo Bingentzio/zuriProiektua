@@ -2,7 +2,7 @@
 .hasierakoOrria{
   width: 75%;
   position: absolute;
-  top:15%;
+  top:13%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -44,9 +44,10 @@
 }
 
 .hasierakoOrria fieldset legend {
-    border-bottom: 3px solid black;
+  font-size: 30px;
+    border-bottom: 4px solid black;
     width: 100%;
-    line-height: 1rem;
+    line-height: 2rem;
 }
 
 .hasierakoOrria button[type="submit"] {
@@ -55,6 +56,10 @@
     margin: auto;
     left: 0;
     right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    height: 70px;
     text-transform: uppercase;
     box-shadow: none;
 }
